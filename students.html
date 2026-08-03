@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("login")!="true"){
+    window.location="login.html";
+}
+</script>
+
+<div class="sidebar">
+
+    <h2>🎓 SMS</h2>
+
+    <ul>
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <li><a href="students.html">👨‍🎓 Students</a></li>
+        <li><a href="#" onclick="logout()">🚪 Logout</a></li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Student Management</h1>
+
+        <button id="darkBtn" onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search Student..."
+        onkeyup="searchStudent()">
+
+    <br><br>
+
+    <div class="student-form">
+
+        <input type="text" id="id" placeholder="Student ID" required>
+
+        <input type="text" id="name" placeholder="Student Name" required>
+
+        <input type="text" id="dept" placeholder="Department" required>
+
+        <input type="text" id="year" placeholder="Year" required>
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="text" id="phone" placeholder="Phone" required>
+
+    
+
+        <button onclick="saveStudent()">
+            Save Student
+        </button>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="studentTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+displayStudents();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("login")!="true"){
+    window.location="login.html";
+}
+</script>
+
+<div class="sidebar">
+
+    <h2>🎓 SMS</h2>
+
+    <ul>
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <li><a href="students.html">👨‍🎓 Students</a></li>
+        <li><a href="#" onclick="logout()">🚪 Logout</a></li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Dashboard</h1>
+
+        <button id="darkBtn" onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2 id="totalStudents">0</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2 id="totalDept">0</h2>
+            <p>Departments</p>
+        </div>
+
+        <div class="card">
+            <h2>2026</h2>
+            <p>Academic Year</p>
+        </div>
+
+    </div>
+
+    <div class="chart-container">
+
+        <h2>Students by Department</h2>
+
+        <canvas id="studentChart"></canvas>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+loadDashboard();
+loadChart();
+</script>
+
+</body>
+</html>
