@@ -38,7 +38,7 @@ The system provides an easy interface to add, view, update, and manage student d
 The main objective of this project is to provide a simple digital solution for managing student information and maintaining student records efficiently.
 
 ## 🌐 Live Demo
-👉 [View Student Management System Live](https://jeyabharathy30092006-cpu.github.io/Student-Management-System/)
+👉 [View Student Management System]:https://jeyabharathy30092006-cpu.github.io/Student-Management-System/
 
 ## 📸 Screenshots
 ### 🔐 Login Page
@@ -58,6 +58,7 @@ The main objective of this project is to provide a simple digital solution for m
 
 ## 👨‍💻 Author
 **Jeya Bharathy**
+
 Computer Science and Engineering Student
 
 ## ⭐ Support
