@@ -62,7 +62,7 @@ The main objective of this project is to provide a simple digital solution for m
 Computer Science and Engineering Student
 
 ## ⭐ Support
-If you find this project useful, please consider giving this repository a ⭐.
+If you find this project useful, please consider giving this repository on GitHub.
 
 ---
 
